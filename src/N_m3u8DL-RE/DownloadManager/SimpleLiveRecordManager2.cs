@@ -104,7 +104,7 @@ namespace N_m3u8DL_RE.DownloadManager
 
             if (hls && allHasDatetime)
             {
-                name = GetUnixTimestamp(segment.DateTime!.Value).ToString();
+                name = segment.Url.Split('_').Last().Split('.')[0];
             }
             else if (hls)
             {
